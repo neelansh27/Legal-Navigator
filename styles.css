@@ -1,0 +1,85 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.navBar{
+    display: flex;
+    align-items: baseline;
+    border-bottom: 2px solid black;
+}
+.logo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navLinks{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.navHead{
+    margin-right: 30px;
+}
+main{
+    padding-top: 10vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: flex-start;
+    justify-content: center;
+}
+.balance{
+    width: 35vw;
+    padding: 20px;
+}
+.content{
+    padding: 3vh 6vw;
+}
+.heading{
+    font-weight: 900;
+    font-size: 2rem;
+}
+.subText{
+    margin-top: 20px;
+    font-size: 1em;
+    padding-right: 3.8vw;
+    max-width: 360px;
+}
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 1vw 20px 0px;
+}
+.auth{
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #E5D290;
+    width: 150px;
+    padding: 7px 20px;
+    border-radius: 30px;
+    border: 3px solid #E5D290;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+.auth-outline{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:#E5D290;
+    background-color: transparent;
+    width: 150px;
+    padding: 7px 20px;
+    border: 3px solid #E5D290;
+    border-radius: 30px;
+
+}
