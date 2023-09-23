@@ -1,16 +1,16 @@
 .heading {
   text-align: center;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: bolder;
   margin-top: 20px;
 }
 
-.participants {
+section {
   margin-top: 40px;
   padding: 10px 3vw;
 }
 .caption {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-size: bold;
   text-align: center;
 }
@@ -44,7 +44,7 @@
   border-right: 1px solid #ccc;
 }
 .defendants,
-.procecutors {
+.prosecutors {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
@@ -70,4 +70,48 @@
 .member .role {
   font-size: 0.9rem;
   color: #76787f;
+}
+
+.dtable{
+    display: grid;
+    grid-template-columns: 1fr 2fr;   
+    margin: 20px 7vw;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px #ccc;
+}
+
+.dlabel, .dvalue{
+    text-align: center;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.dlabel{
+    font-weight: 400;
+    background-color: #EDECEB;
+}
+
+.hearings ul{
+    list-style: none;
+    margin-bottom: 20vh;
+}
+
+.hearings ul li {
+    margin: 10px 10vw;
+    border: 1px solid #ccc;
+    border-radius:15px;
+    box-shadow: 0px 0px 4px #ccc;
+}
+
+.hearings ul li .hdetails{
+    font-size: 1.2rem;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.hearings ul li .hsummary{
+ padding: 10px;
 }
