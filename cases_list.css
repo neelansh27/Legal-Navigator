@@ -1,0 +1,90 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+}
+.navBar{
+    display: flex;
+    align-items: baseline;
+    border-bottom: 2px solid black;
+}
+.logo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navLinks{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.navHead{
+    margin-right: 30px;
+}
+
+.topBar{
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+}
+
+.heading{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.fbtn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 4px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 1.1rem;
+}
+.fbtn:hover{
+    color: #FFCE21;
+    background-color: transparent;
+    border-color: #FFCE21;
+}
+
+main ul {
+    list-style: none;
+    padding: 20px 3vw;
+}
+
+main ul li {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px ;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0,0.2);
+    transition: transform 0.3s ease;
+    font-size: 0.95rem;
+}
+main ul li:nth-child(odd){
+    background-color: #E5E5E5;
+}
+main ul li h2 {
+    padding: 0;
+    margin: 0;
+}
+main ul li:hover {
+    transform: scale(1.03);
+}
+.status{
+    font-size: 0.9rem;
+    color: #98989B;
+    margin: 8px 0px;
+}
