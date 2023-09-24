@@ -2,7 +2,6 @@ import os
 from flask import Flask, json, render_template, send_from_directory,request, redirect, flash,url_for,session
 from flask_sqlalchemy import SQLAlchemy
 import chatbot3 as cb
-# import pySQLcase as case
 import summary as summ
 import csv
 from flask_session import Session
@@ -157,5 +156,3 @@ def logout():
 with app.app_context():
     db.create_all()
 
-if __name__ == '__main__':
-    app.run()

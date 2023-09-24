@@ -30,3 +30,4 @@ tqdm
 typing_extensions
 tzdata
 Werkzeug
+gunicorn
