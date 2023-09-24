@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    top: 0;
+}
+
+ul {
+    border: 2px solid black;
+    height: 60px;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    position: relative;
+    top: 15px;
+    display: inline;
+    margin: 17px;
+}
+
+.nonsub {
+    font-size: x-large;
+}
+
+.sub {
+    position: relative;
+    font-size: larger;
+    margin: 45px;
+    left: 500px;
+    top: 15px;
+}
+
+.title {
+    box-shadow: 0 4px 8px 0 rgba(0, 0.2, 0.2, 0);
+    border: 2px solid black;
+    padding: 50px;
+    text-align: center;
+    font-size: larger;
+    background-color: #C0B680;
+    color: black;
+}
+
+.section-body {
+
+    padding-top: 30px;
+    padding-left: 15px;
+}
+
+.section-body h4 {
+    font-size: large;
+}
+
+.vertical-nav {
+    padding-top: 10px;
+}
+
+
+.section-body ul {
+    list-style-type: none;
+    width: 18%;
+    background-color: #d6e4f0;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+}
+
+.section-body li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.section-body li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.section-body li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid #C0B680;
+    max-width: 300px;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+}
+
+.subtitle {
+    color: grey;
+    font-size: 18px;
+    margin: 16px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    background-color: white;
+    border: 2px solid #C0B680;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-size: 18px;
+    position: relative;
+    top: 160px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.container {
+    padding: 16px 16px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 25px 10px;
+}
+
+.row {
+    margin: 0 -5px;
+    position: relative;
+    top: 35px;
+    left: 110px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+button:hover{
+    background-color: #C0B680;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}

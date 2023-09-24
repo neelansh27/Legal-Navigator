@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/legaldocs.css')}}">
+    <title>Legal Documents</title>
+</head>
+
+<body>
+
+    <head>
+        <nav>
+            <ul>
+                <li class="nonsub"><b>LegalNavigator</b></li>
+                <li class="sub">option 1</li>
+                <li class="sub">option 2</li>
+                <li class="sub">option 3</li>
+            </ul>
+        </nav>
+    </head>
+    <main>
+        <div class="title" style="text-align: center;">
+            <h1>
+                List Of Legal Documents
+            </h1>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h1>Case title</h1>
+                        <p class="subtitle">Case Context</p>
+                        <p><a href="{{ url_for('static',filename='PDFs/1.pdf') }}" target="_blank"><button>View Report</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h1>Case title</h1>
+                        <p class="subtitle">Case Context</p>
+                        <p><a href="{{ url_for('static',filename='PDFs/1.pdf') }}" target="_blank"><button>View Report</button></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h1>Case title</h1>
+                        <p class="subtitle">Case Context</p>
+                        <p><a href="{{ url_for('static',filename='PDFs/1.pdf') }}" target="_blank"><button>View Report</button></a></p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </main>
+</body>
+
+</html>

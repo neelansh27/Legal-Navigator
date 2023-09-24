@@ -128,10 +128,8 @@ def caseDetails(id):
     return render_template('case_details.html',case=cases[0],hearing=hear)
 
 @app.route('/LegalDocuments')
-def firpdf():
-    # List all PDF files in the folder
-    pdf_files = [file for file in os.listdir(pdf_folder) if file.endswith(".pdf")]
-    return render_template('fir.html', pdf_files=pdf_files)
+def LegalDocuments():
+    return render_template('legaldocs.html')
 
 @app.route('/LegalDocuments/pdf/<filename>')
 def serve_pdf(filename):
