@@ -115,3 +115,7 @@ section {
 .hearings ul li .hsummary{
  padding: 10px;
 }
+
+.empty {
+    text-align: center;
+}

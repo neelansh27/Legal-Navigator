@@ -16,12 +16,18 @@
         </div>
         <ul>
             {% if cases %}
-                {{ cases }}
+                {% for case in cases %}
+                    <li>
+                        <a href= "{{ url_for('caseDetails', id=case.id) }}">
+                            <h2>{{ case.title }}</h2>
+                            <div class="status">Status: {{ case.status }}</div>
+                            <div class="opening">Opened on: {{ case.filing }}</div>
+                        </a>
+                    </li>
+                {% endfor %}
             {% else %}
                 <li>
                     <h2>No active cases</h2>
-                    <div class="status">Status:Open</div>
-                    <div class="opening">Opened on: 30-2-1969</div>
                 </li>
             {% endif %}
         </ul>

@@ -1,12 +1,43 @@
 import os
 from flask import Flask, render_template, send_from_directory,request, redirect, flash,url_for,session
+from flask_sqlalchemy import SQLAlchemy
 import chatbot3 as cb
 # import pySQLcase as case
 import summary as summ
 import csv
 from flask_session import Session
+import os
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("URI")
+db = SQLAlchemy(app)
 
+# Models
+class case(db.Model):
+    __tablename__='case'
+    id = db.Column(db.Integer,primary_key=True,autoincrement=True)
+    title=db.Column(db.String(30))
+    judge=db.Column(db.String(40))
+    accused=db.Column(db.String(40))
+    defendant_lawyer=db.Column(db.String(40))
+    petitioner=db.Column(db.String(40))
+    prosecution_lawyer=db.Column(db.String(40))
+    description=db.Column(db.String(1200))
+    court_name=db.Column(db.String(40))
+    status=db.Column(db.String(40))
+    filing=db.Column(db.Date)
+    next_trail=db.Column(db.Date)
+
+class hearing(db.Model):
+    __tablename__="hearing"
+    id = db.Column(db.Integer,primary_key=True,autoincrement=True)
+    hdate=db.Column(db.Date)
+    summary=db.Column(db.String(800))
+    case_id=db.Column(db.Integer,db.ForeignKey('case.id'),nullable=False)
+
+    
+
+    
+print("connected")
 # Define the folder where your PDF files are stored
 pdf_folder = "\\PDFs\\"  # Create a folder named "pdfs" and place your PDF files inside
 
@@ -73,17 +104,16 @@ def summary():
     result=summ.get_article_summary(selected_article)
     return result
 
-@app.route("/casinfo",methods=['GET', 'POST'])
-def casinfo():
-    if 'username' in session:
-        username = session['username']
-    
-    result=case.Show_Case_Info(username)
-    return result
-
 @app.route("/caseList")
 def caseInfo():
-    return render_template('cases_list.html')
+    cases=case.query.all()
+    return render_template('cases_list.html',cases=cases)
+
+@app.route("/caseDetails/<id>")
+def caseDetails(id):
+    cases=case.query.filter_by(id=id).all()
+    hear=hearing.query.filter_by(case_id=id).all()
+    return render_template('case_details.html',case=cases[0],hearing=hear)
 
 @app.route('/FIR')
 def firpdf():
@@ -98,6 +128,9 @@ def serve_pdf(filename):
         return send_from_directory(pdf_folder, filename)
     except FileNotFoundError:
         return "PDF not found", 404
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == '__main__':
     app.run(debug=True)

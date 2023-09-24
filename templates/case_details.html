@@ -1,95 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Case Details</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="navBar.css" />
-    <link rel="stylesheet" type="text/css" href="case_details.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navBar">
-        <div class="logo">
-          <a href="#">Project Name</a>
+{% extends "base.html" %} {% block title %} Case Details {% endblock %} {% block
+head %} {{ super() }} <link rel="stylesheet" type="text/css" href="{{
+url_for("static",filename="css/case_details.css") }}"> {% endblock %} {% block
+body%}
+<main>
+  <div class="heading">{{ case.title }}</div>
+  <section class="participants">
+    <div class="caption">Courtroom Participants</div>
+    <div class="board">
+      <div class="judge">
+        <div class="member">
+          <img
+            class="member_logo"
+            src="{{ url_for('static',filename='img/judge.png') }}"
+            alt="judge"
+          />
+          <div class="name">{{ case.judge }}</div>
+          <div class="role">Judge</div>
         </div>
-        <ul class="navLinks">
-          <li class="navHead">option 1</li>
-          <li class="navHead">option 2</li>
-          <li class="navHead">option 3</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="heading">This is a Test Case</div>
-      <section class="participants">
-        <div class="caption">Courtroom Participants</div>
-        <div class="board">
-          <div class="judge">
-            <div class="member">
-              <img class="member_logo" src="judge.png" alt="judge" />
-              <div class="name">Mr. Trivedi</div>
-              <div class="role">Judge</div>
-            </div>
-          </div>
-          <div class="dhead">Defendant</div>
-          <div class="phead">Prosecution</div>
-          <div class="defendants">
-            <div class="member">
-              <img class="member_logo" src="person.png" alt="judge" />
-              <div class="name">Dharmpal Yadav</div>
-              <div class="role">Accused</div>
-            </div>
-            <div class="member">
-              <img class="member_logo" src="lawyer.png" alt="judge" />
-              <div class="name">Sanjay Sharma</div>
-              <div class="role">Lawyer</div>
-            </div>
-          </div>
-          <div class="prosecutors">
-            <div class="member">
-              <img class="member_logo" src="person.png" alt="judge" />
-              <div class="name">Pratap Singh</div>
-              <div class="role">Petitioner</div>
-            </div>
-            <div class="member">
-              <img class="member_logo" src="lawyer.png" alt="judge" />
-              <div class="name">Jhon Adams</div>
-              <div class="role">lawyer</div>
-            </div>
-          </div>
+      </div>
+      <div class="dhead">Defendant</div>
+      <div class="phead">Prosecution</div>
+      <div class="defendants">
+        <div class="member">
+          <img
+            class="member_logo"
+            src="{{ url_for('static',filename='img/person.png') }}"
+            alt="judge"
+          />
+          <div class="name">{{ case.accused }}</div>
+          <div class="role">Accused</div>
         </div>
-      </section>
-      <section class="Details">
-       <div class="caption">Case Details</div>
-       <div class="dtable">
-        <div class="dlabel">Case description</div>
-        <div class="dvalue">Ipsum ipsum delectus ut accusantium laborum! Voluptatem expedita praesentium tempora asperiores quia! Animi deserunt sit molestiae debitis quis doloremque? Maiores distinctio eaque officia minus ducimus cupiditate maiores sequi Accusamus repudiandae quidem illum aspernatur debitis quia voluptatibus Voluptatibus enim inventore quia recusandae illo Itaque possimus minima dignissimos non libero Deserunt ullam recusandae eveniet ipsa pariatur Iste at quasi quasi incidunt placeat?</div>
-        <div class="dlabel">Court</div>
-        <div class="dvalue">Lorem sed facere commodi</div>
-        <div class="dlabel">Filing Date</div>
-        <div class="dvalue">12-12-2022</div>
-        <div class="dlabel">Date of next trial</div>
-        <div class="dvalue">12-1-2023</div>
-        <div class="dlabel">Status</div>
-        <div class="dvalue">Pending</div>
-       </div>
-      </section>
+        <div class="member">
+          <img
+            class="member_logo"
+            src="{{ url_for('static',filename='img/lawyer.png') }}"
+            alt="judge"
+          />
+          <div class="name">{{ case.defendant_lawyer }}</div>
+          <div class="role">Lawyer</div>
+        </div>
+      </div>
+      <div class="prosecutors">
+        <div class="member">
+          <img
+            class="member_logo"
+            src="{{ url_for('static',filename='img/person.png') }}"
+            alt="judge"
+          />
+          <div class="name">{{ case.petitioner }}</div>
+          <div class="role">Petitioner</div>
+        </div>
+        <div class="member">
+          <img
+            class="member_logo"
+            src="{{ url_for('static',filename='img/lawyer.png') }}"
+            alt="judge"
+          />
+          <div class="name">{{ case.prosecution_lawyer }}</div>
+          <div class="role">lawyer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Details">
+    <div class="caption">Case Details</div>
+    <div class="dtable">
+      <div class="dlabel">Case description</div>
+      <div class="dvalue">{{ case.description }}</div>
+      <div class="dlabel">Court</div>
+      <div class="dvalue">{{ case.court_name }}</div>
+      <div class="dlabel">Filing Date</div>
+      <div class="dvalue">{{ case.filing }}</div>
+      <div class="dlabel">Date of next trial</div>
+      <div class="dvalue">{{ case.next_trail }}</div>
+      <div class="dlabel">Status</div>
+      <div class="dvalue">{{ case.status }}</div>
+    </div>
+  </section>
 
-      <section class="hearings">
-          <div class="caption">Details of Each Hearing</div>
-          <ul>
-              <li>
-                  <div class="hdetails">Hearing on 12-12-2022</div>
-                  <div class="hsummary">Amet mollitia inventore quo adipisci minus sit? Laborum necessitatibus illum provident velit consectetur facere. Doloribus recusandae omnis fugiat asperiores omnis aperiam? Cumque labore sint in cupiditate ut Enim impedit labore?</div>
-              </li>
-          </ul>
-      </section>
-    </main>
-  </body>
-</html>
+  <section class="hearings">
+    <div class="caption">Details of Each Hearing</div>
+    <ul>
+      {% if hearing %} {% for trail in hearing %}
+      <li>
+        <div class="hdetails">Hearing on {{ trail.hdate }}</div>
+        <div class="hsummary">{{ trail.summary }}</div>
+      </li>
+      {% endfor %} {% else %}
+      <li>
+        <h2 class="empty">No Hearings Yet</h2>
+      </li>
+      {% endif %}
+    </ul>
+  </section>
+</main>
+{% endblock %}
