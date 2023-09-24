@@ -1,5 +1,3 @@
-import tkinter as tk
-from tkinter import ttk
 
 # Define a dictionary with articles and summaries
 articles_and_summaries = {
@@ -370,11 +368,535 @@ articles_and_summaries = {
 
 "Article 183: Vacation of seats": "It specifies the conditions under which members of the State Legislature shall vacate their seats.",
 
-"Article 184: Disqualifications for membership": "Article 184 outlines disqualifications for membership in the State Legislature."
+"Article 184: Disqualifications for membership": "Article 184 outlines disqualifications for membership in the State Legislature.",
+
+"Article 185: The President's address and messages": "Article 185 discusses the President's role in addressing both Houses of Parliament, either jointly or separately, to outline the government's policies and activities.",
+
+"Article 186: Special address by the President": "Article 186 allows the President to address the Rajya Sabha or its members when a new session begins, and the Rajya Sabha is not in session. This is typically done to inform the Rajya Sabha about the reasons for summoning it.",
+
+"Article 187: The President's powers regarding Money Bills": "Article 187 outlines the President's role in deciding whether a bill is a Money Bill or not, and the consequences of such a decision.",
+
+"Article 188: Procedure for Money Bills": "Article 188 describes the procedure for the passage of Money Bills in Parliament, including the role of the Rajya Sabha in reviewing and making recommendations on such bills.",
+
+"Article 189: Voting on Money Bills": "Article 189 details the voting process for Money Bills, emphasizing that the decision of the Speaker of the House of the People (Lok Sabha) is final regarding the classification of a bill as a Money Bill.",
+
+"Article 190: Assent to Bills": "Article 190 explains the process of Presidential assent to bills passed by both Houses of Parliament, including a provision for withholding assent in certain situations.",
+
+"Article 191: Vacation of seats": "Article 191 outlines the circumstances under which a member of either House of Parliament can be disqualified from their position, including disqualifications due to certain offenses and bankruptcy.",
+
+"Article 192: Decision on questions as to disqualifications": "Article 192 empowers the President to decide on questions related to the disqualification of members of Parliament, based on the recommendations of the Election Commission.",
+
+"Article 193: Bar to interference by courts in electoral matters": "Article 193 restricts the jurisdiction of courts in matters related to elections to Parliament or State Legislatures.",
+
+"Article 194: Powers, privileges, and immunities of State Legislatures and their members": "Article 194 discusses the powers and privileges of State Legislatures and their members, including the power to punish members for contempt.",
+
+"Article 195: Salaries and allowances of members": "Article 195 empowers the State Legislature to determine the salaries and allowances of its members.",
+
+"Article 196: Provisions as to the Speaker and the Deputy Speaker": "Article 196 lays down the procedure for the election or removal of the Speaker and Deputy Speaker of the Legislative Assembly in states.",
+
+"Article 197: Secretariat of State Legislature": "Article 197 deals with the establishment and maintenance of the Secretariat for State Legislatures.",
+
+"Article 198: Sessions of the State Legislature, prorogation, and dissolution": "Article 198 provides details on the summoning, prorogation, and dissolution of the State Legislature.",
+
+"Article 199: Rules of procedure": "Article 199 allows the State Legislature to make rules for the conduct of its business.",
+
+"Article 200: Assent to Bills by Governor": "Article 200 outlines the procedure for the Governor's assent to bills passed by the State Legislature.",
+
+"Article 201: Bills reserved for consideration by the President": "Article 201 deals with bills that require the President's consideration, especially those that affect the powers of the High Court.",
+
+"Article 202: Annual financial statements": "Article 202 specifies the requirements for presenting the annual financial statement in the State Legislature.",
+
+"Article 203: Procedure in Legislature with respect to estimates": "Article 203 outlines the process for discussing and approving the budget estimates in the State Legislature.",
+
+"Article 204: Appropriation Bills": "Article 204 relates to the passage and assent of Appropriation Bills, which authorize government expenditure.",
+
+"Article 205: Supplementary, additional or excess grants": "Article 205 covers the provision for supplementary, additional, or excess grants in the State Legislature.",
+
+"Article 206: Vote on account, votes of credit, and exceptional grants": "Article 206 allows for the granting of votes on account, votes of credit, and exceptional grants by the State Legislature.",
+
+"Article 207: Special provisions as to financial bills": "Article 207 outlines the special procedure for financial bills in the State Legislature.",
+
+"Article 208: Interpretation": "Article 208 addresses questions of interpretation in relation to the State Legislature's powers and procedures.",
+
+"Article 209: Rules of procedure": "Article 209 permits the State Legislature to make rules for its own procedure.",
+
+"Article 210: Language to be used in the Legislature": "Article 210 specifies the languages that can be used in State Legislatures.",
+
+"Article 211: Restriction on discussion in the Legislature": "Article 211 places restrictions on discussions and debates in the State Legislature regarding the conduct of judges of High Courts.",
+
+"Article 212: Courts not to inquire into proceedings of the Legislature": "Article 212 bars the courts from inquiring into the proceedings of the State Legislature.",
+
+"Article 213: Power of Governor to promulgate ordinances": "Article 213 empowers the Governor to issue ordinances when the State Legislature is not in session.",
+
+"Article 214: High Courts for States": "Article 214 establishes High Courts for the States.",
+
+"Article 215: High Courts to be courts of record": "Article 215 designates High Courts as courts of record, with the power to punish for contempt of court.",
+
+"Article 216: Constitution of High Courts": "Article 216 outlines the composition and jurisdiction of High Courts.",
+
+"Article 217: Appointment and conditions of the office of a Judge of a High Court": "Article 217 deals with the appointment and conditions of service of Judges of High Courts.",
+
+"Article 218: Application of certain provisions relating to Supreme Court to High Courts": "Article 218 extends certain provisions related to the Supreme Court to High Courts.",
+
+"Article 219: Oath or affirmation by Judges of High Courts": "Article 219 requires Judges of High Courts to take an oath or affirmation before assuming their duties.",
+
+"Article 220: Transfer of Judges from one High Court to another": "Article 220 allows for the transfer of Judges from one High Court to another, with the President's approval.",
+
+"Article 221: Salaries, etc., of Judges": "Article 221 deals with the salaries and allowances of Judges of High Courts.",
+
+"Article 222: Transfer of a Judge from one High Court to another": "Article 222 empowers the President to transfer a Judge from one High Court to another, after consulting with the Chief Justice of India and the Chief Justice of the respective High Courts.",
+
+"Article 223: Appointment of acting Chief Justice": "Article 223 allows for the appointment of an acting Chief Justice of a High Court when the office of Chief Justice is vacant or the Chief Justice is absent.",
+
+"Article 224: Appointment of additional and acting Judges": "Article 224 permits the appointment of additional Judges or acting Judges in a High Court.",
+
+"Article 224A: Appointment of retired Judges at sittings of High Courts": "Article 224A allows for the appointment of retired Judges as ad hoc Judges in High Courts for a temporary period.",
+
+"Article 225: Jurisdiction of existing High Courts": "Article 225 preserves the jurisdiction of High Courts that existed before the adoption of the Constitution.",
+
+"Article 226: Power of High Courts to issue certain writs": "Article 226 grants High Courts the power to issue writs for the enforcement of fundamental rights and other legal rights.",
+
+"Article 227: Power of superintendence over all courts by the High Court": "Article 227 confers the High Court with the power of superintendence over all courts and tribunals in its jurisdiction.",
+
+"Article 228: Transfer of certain cases to High Court": "Article 228 allows for the transfer of certain cases from subordinate courts to the High Court, primarily related to constitutional matters.",
+
+"Article 229: Officers and servants and the expenses of High Courts": "Article 229 covers the appointment and administration of officers and servants of High Courts, as well as their expenses.",
+
+"Article 230: Extension of jurisdiction of High Courts to Union territories": "Article 230 provides for the extension of the jurisdiction of a High Court to Union territories.",
+
+"Article 231: Establishment of a common High Court for two or more states": "Article 231 allows for the establishment of a common High Court for two or more states with the consent of the concerned states and the President's approval.",
+
+"Article 232: Transfer of certain cases to Supreme Court": "Article 232 empowers the President to transfer certain cases from a High Court to the Supreme Court for adjudication.",
+
+"Article 233: Appointment of District Judges": "Article 233 outlines the appointment process of District Judges, including consultation with the High Court.",
+
+"Article 234: Recruitment of persons other than District Judges to the judicial service": "Article 234 deals with the recruitment of individuals other than District Judges to the judicial service of the state.",
+
+"Article 235: Control over subordinate courts": "Article 235 vests the High Court with control and supervision over the subordinate judiciary within its jurisdiction.",
+
+"Article 236: Interpretation": "Article 236 addresses questions of interpretation related to the appointment and control of judges.",
+
+"Article 237: Application of the provisions relating to the appointment of District Judges to certain classes of magistrates": "Article 237 extends certain provisions related to the appointment of District Judges to specific classes of magistrates.",
+
+"Article 238: Continuance of existing laws and their adaptation": "Article 238 allows for the continuation of existing laws and their adaptation to align with the provisions of the Constitution.",
+
+"Article 239: Administration of Union territories": "Article 239 deals with the administration of Union territories, including the appointment of an administrator.",
+
+"Article 239A: Creation of local legislatures or Council of Ministers or both for certain Union territories": "Article 239A provides for the creation of local legislatures or Council of Ministers or both in certain Union territories.",
+
+"Article 239AB: Provision in case of failure of constitutional machinery": "Article 239AB outlines the President's powers to assume the functions of the government in a Union territory in case of a breakdown of constitutional machinery.",
+
+"Article 240: Power of President to make regulations for certain Union territories": "Article 240 empowers the President to make regulations for the administration of certain Union territories.",
+
+"Article 241: High Courts for Union territories": "Article 241 provides for the establishment of High Courts for Union territories.",
+
+"Article 242: Jurisdiction of High Courts in Union territories": "Article 242 specifies the jurisdiction of High Courts in Union territories.",
+
+"Article 243: Definitions": "Article 243 provides definitions for terms used in Part IX of the Constitution, which deals with Panchayats.",
+
+"Article 243A: Gram Sabha": "Article 243A defines the role and functions of the Gram Sabha in rural local governance.",
+
+"Article 243B: Constitution of Panchayats": "Article 243B lays down the composition of Panchayats at various levels, including the reservation of seats for Scheduled Castes, Scheduled Tribes, and women.",
+
+"Article 243C: Composition of Panchayats": "Article 243C discusses the composition of Panchayats at different levels and the reservation of seats for Scheduled Castes, Scheduled Tribes, and women.",
+
+"Article 243D: Reservation of seats": "Article 243D deals with the reservation of seats for Scheduled Castes, Scheduled Tribes, and women in Panchayats.",
+
+"Article 243E: Duration of Panchayats": "Article 243E specifies the term duration of Panchayats.",
+
+"Article 243F: Disqualifications for membership": "Article 243F outlines the disqualifications for membership in Panchayats.",
+
+"Article 243G: Powers, authority, and responsibilities of Panchayats": "Article 243G delineates the powers, authority, and responsibilities of Panchayats.",
+
+"Article 243H: Powers to impose taxes by, and funds of, the Panchayats": "Article 243H discusses the power of Panchayats to impose taxes and manage their funds.",
+
+"Article 243I: Constitution of Finance Commission to review financial position": "Article 243I provides for the creation of a Finance Commission to review the financial position of Panchayats.",
+
+"Article 243J: Audit of accounts of Panchayats": "Article 243J mandates the audit of Panchayats' accounts by the State's Auditor General or an equivalent authority.",
+
+"Article 243K: Elections to the Panchayats": "Article 243K covers the conduct of elections to Panchayats, including the State Election Commission's role.",
+
+"Article 243L: Application to Union territories": "Article 243L extends the provisions related to Panchayats to Union territories.",
+
+"Article 243M: Part not to apply to certain areas": "Article 243M specifies that Part IX of the Constitution (which includes Articles 243A to 243ZG) does not apply to areas excluded by law.",
+
+"Article 243N: Continuance of existing laws and their adaptation": "Article 243N allows for the continuation of existing laws related to Panchayats and their adaptation to align with the Constitution.",
+
+"Article 243O: Bar to interference by courts in electoral matters": "Article 243O restricts the jurisdiction of courts in matters related to Panchayat elections.",
+
+"Article 243P: Definitions": "Article 243P provides definitions for terms used in Part IXA of the Constitution, which deals with Municipalities.",
+
+"Article 243Q: Constitution of Municipalities": "Article 243Q discusses the composition and organization of Municipalities.",
+
+"Article 243R: Composition of Municipalities": "Article 243R lays down the composition of Municipalities at different levels.",
+
+"Article 243S: Reservation of seats": "Article 243S deals with the reservation of seats for Scheduled Castes, Scheduled Tribes, and women in Municipalities.",
+
+"Article 243T: Duration of Municipalities": "Article 243T specifies the term duration of Municipalities.",
+
+"Article 243U: Disqualifications for membership": "Article 243U outlines the disqualifications for membership in Municipalities.",
+
+"Article 243V: Powers, authority, and responsibilities of Municipalities": "Article 243V delineates the powers, authority, and responsibilities of Municipalities.",
+
+"Article 244: Administration of Scheduled Areas and Tribal Areas": "Article 244 deals with the administration of Scheduled Areas and Tribal Areas in various states and empowers the President to issue orders for the governance of these areas.",
+
+"Article 244A: Formation of an autonomous State comprising certain tribal areas in Assam and Meghalaya": "Article 244A provides for the formation of autonomous states within Assam and Meghalaya to protect the interests of tribal communities residing in these areas.",
+
+"Article 244B: Establishment of a Development Board for specified tribes or tribal areas in Assam": "Article 244B allows for the establishment of a Development Board for specified tribes or tribal areas in Assam to promote their welfare and advancement.",
+
+"Article 245: Extent of laws made by Parliament and by the Legislatures of States": "Article 245 clarifies the scope and extent of laws made by the Parliament and the State Legislatures, ensuring that they do not encroach upon each other's areas of jurisdiction.",
+
+"Article 246: Subject-matter of laws made by Parliament and by the Legislatures of States": "Article 246 delineates the subjects on which Parliament and State Legislatures can make laws, based on the three lists provided in the Seventh Schedule.",
+
+"Article 247: Power of Parliament to provide for the establishment of certain additional courts": "Article 247 grants Parliament the authority to establish additional courts for the better administration of certain Union territories or areas.",
+
+"Article 248: Residuary powers of legislation": "Article 248 vests in Parliament the residuary powers to make laws on subjects not covered by the Union or State lists.",
+
+"Article 249: Power of Parliament to legislate with respect to a matter in the State List in the national interest": "Article 249 allows Parliament to make laws on State List subjects if the Rajya Sabha passes a resolution by a two-thirds majority declaring it necessary in the national interest.",
+
+"Article 250: Power of the President to legislate in case of a Proclamation of Emergency": "Article 250 empowers the President to make laws on State List subjects when a Proclamation of Emergency is in operation.",
+
+"Article 251: Inconsistency between laws made by Parliament and laws made by the Legislatures of States": "Article 251 addresses situations of inconsistency between laws made by Parliament and State Legislatures, giving precedence to the former in specific cases.",
+
+"Article 252: Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State": "Article 252 allows Parliament to make laws for two or more states with their consent, and other states can adopt such legislation if they choose.",
+
+"Article 253: Legislation for giving effect to international agreements": "Article 253 enables Parliament to make laws for implementing international agreements, treaties, or conventions.",
+
+"Article 254: Inconsistency between laws made by Parliament and laws made by the Legislatures of States": "Article 254 deals with the resolution of inconsistencies between laws made by Parliament and State Legislatures, providing a mechanism for the latter to be overridden by the former in certain circumstances.",
+
+"Article 255: Requirements as to recommendations and previous sanctions to be regarded as matters of procedure only": "Article 255 clarifies that recommendations and previous sanctions required for certain legislative actions are considered matters of procedure and do not affect the validity of the resulting laws.",
+
+"Article 256: Obligation of States and the Union": "Article 256 emphasizes the obligation of states and the union to adhere to the laws made by Parliament and the executive powers vested in the President.",
+
+"Article 257: Control of the Union over States in certain cases": "Article 257 outlines the control that the Union government can exercise over states in matters related to international treaties and agreements.",
+
+"Article 258: Power of the States to entrust functions to the Union": "Article 258 allows states to entrust functions to the Union government, facilitating cooperation in specific areas.",
+
+"Article 258A: Power of the States to entrust functions to the Union relating to certain matters": "Article 258A provides states with the authority to entrust functions to the Union government concerning matters in the State List.",
+
+"Article 259: Jurisdiction of the Union in relation to territories outside India": "Article 259 defines the jurisdiction of the Union in relation to territories outside India and allows Parliament to acquire such territories.",
+
+"Article 260: Jurisdiction of the Union and the States in relation to treaties and agreements with foreign countries": "Article 260 specifies the jurisdiction of the Union and the states in relation to treaties and agreements with foreign countries.",
+
+"Article 261: Public acts, records, and judicial proceedings": "Article 261 ensures the recognition of public acts, records, and judicial proceedings between states and the Union, and states that these shall have the same authority throughout India.",
+
+"Article 262: Adjudication of disputes relating to waters of inter-State rivers or river valleys": "Article 262 provides for the adjudication of disputes related to the waters of inter-State rivers or river valleys by a tribunal appointed by the President.",
+
+"Article 263: Provisions with respect to an inter-State Council": "Article 263 establishes the Inter-State Council to promote coordination between states and the Union, particularly in matters of common interest.",
+
+"Article 264: Interpretation": "Article 264 addresses questions of interpretation regarding the distribution of legislative powers between the Union and the states.",
+
+"Article 265: Taxes not to be levied save by authority of law": "Article 265 mandates that taxes cannot be imposed except by the authority of law.",
+
+"Article 266: Consolidated Funds and public accounts of India and of the States": "Article 266 establishes Consolidated Funds and Public Accounts for India and the states, specifying their respective uses and management.",
+
+"Article 267: Contingency Fund": "Article 267 provides for the establishment of a Contingency Fund for the Union and the states, allowing for urgent expenditures in unforeseen circumstances.",
+
+"Article 268: Duties levied by the Union but collected and appropriated by the States": "Article 268 deals with duties levied by the Union but collected and appropriated by the states.",
+
+"Article 268A: Service tax levied by the Union and collected and appropriated by the Union and the States": "Article 268A relates to the service tax levied by the Union and its collection and appropriation by both the Union and the states.",
+
+"Article 269: Taxes levied and collected by the Union but assigned to the States": "Article 269 discusses taxes levied and collected by the Union but assigned to the states.",
+
+"Article 270: Taxes levied and distributed between the Union and the States": "Article 270 outlines the distribution of taxes between the Union and the states.",
+
+"Article 271: Surcharge on certain duties and taxes for the purposes of the Union": "Article 271 allows for the imposition of surcharges on certain duties and taxes for Union purposes.",
+
+"Article 272: Taxes specified in the Union List to be levied by the Government of India and distributed between the Union and the States": "Article 272 specifies the taxes listed in the Union List that shall be levied by the Government of India and distributed between the Union and the states.",
+
+"Article 273: Grants in lieu of export duties": "Article 273 provides for grants in lieu of export duties.",
+
+"Article 274: Prior recommendation of President required to Bills affecting taxation in which States are interested": "Article 274 mandates the prior recommendation of the President for Bills affecting taxation in which states have an interest.",
+
+"Article 275: Grants from the Union to certain States": "Article 275 allows for grants from the Union to certain states, especially those with financial needs.",
+
+"Article 276: Taxes on professions, trades, callings, and employments": "Article 276 pertains to the taxation of professions, trades, callings, and employments.",
+
+"Article 277: Savings": "Article 277 contains a savings clause to protect the existing laws on taxation.",
+
+"Article 278: Rules of procedure": "Article 278 permits the President to make rules for the allocation of business among the ministers.",
+
+"Article 279: Calculation of net proceeds, etc.": "Article 279 provides for the calculation of the net proceeds of certain taxes and their distribution between the Union and the states.",
+
+"Article 280: Finance Commission": "Article 280 establishes the Finance Commission, which reviews the financial position of the Union and the states and makes recommendations on the distribution of finances.",
+
+"Article 281: Recommendations of the Finance Commission": "Article 281 outlines the recommendations of the Finance Commission and the President's duties in this regard.",
+
+"Article 282: Expenditure defrayable by the Union or a State out of its revenues": "Article 282 permits the Union and states to incur expenditures for specific purposes out of their respective revenues.",
+
+"Article 283: Custody, etc., of Consolidated Funds, Contingency Funds, and moneys credited to the public accounts": "Article 283 deals with the custody and management of Consolidated Funds, Contingency Funds, and moneys in public accounts.",
+
+"Article 284: Custody of suitors' deposits and other moneys received by public servants and courts": "Article 284 specifies the custody of suitors' deposits and other funds received by public servants and courts.",
+
+"Article 285: Exemption of property of the Union from State taxation": "Article 285 exempts the property of the Union from State taxation.",
+
+"Article 286: Restrictions as to imposition of tax on the sale or purchase of goods": "Article 286 lays down restrictions on the imposition of taxes on the sale or purchase of goods.",
+
+"Article 287: Exemption from taxes on electricity": "Article 287 provides for the exemption from certain taxes on electricity supplied by the Union to a state or any other state.",
+
+"Article 288: Exemption from taxation by States in respect of water or electricity in certain cases": "Article 288 exempts water or electricity supplied by the Union or another state from taxation by states in certain cases.",
+
+"Article 289: Exemption of property and income of a State from Union taxation": "Article 289 exempts the property and income of a state from Union taxation.",
+
+"Article 290: Adjustment in respect of certain expenses and pensions": "Article 290 addresses the adjustment of expenses and pensions between the Union and certain states.",
+
+"Article 290A: Annual payment to certain Devaswom Funds": "Article 290A provides for an annual payment to certain Devaswom Funds.",
+
+"Article 291: Exemption of property and income of a Ruler from taxation": "Article 291 exempts the property and income of a Ruler from taxation, subject to certain conditions.",
+
+"Article 292: Borrowing by States": "Article 292 allows states to borrow within certain limits.",
+
+"Article 293: Borrowing by States within the territory of India": "Article 293 deals with the borrowing powers of states within the territory of India.",
+
+"Article 294: Succession to property, assets, rights, and liabilities": "Article 294 addresses the succession to property, assets, rights, and liabilities in relation to the states.",
+
+"Article 295: Succession to property, assets, rights, and liabilities in other cases": "Article 295 covers the succession to property, assets, rights, and liabilities in cases other than those mentioned in Article 294.",
+
+"Article 296: Property accruing by escheat or lapse or as bona vacantia": "Article 296 addresses property that accrues by escheat, lapse, or as bona vacantia.",
+
+"Article 297: Things of value within territorial waters or continental shelf and resources of the exclusive economic zone to vest in the Union": "Article 297 vests things of value within territorial waters or the continental shelf and resources of the exclusive economic zone in the Union.",
+
+"Article 298: Power to carry on trade, etc.": "Article 298 grants the Union and states the power to carry on trade, business, and services.",
+
+"Article 299: Contracts": "Article 299 outlines the manner in which contracts made by the Union or a state shall be executed.",
+
+"Article 300: Suits and proceedings": "Article 300 specifies that the Union and states can sue and be sued in their respective names.",
+
+"Article 301: Freedom of trade, commerce, and intercourse": "Article 301 provides for the freedom of trade, commerce, and intercourse throughout India.",
+
+"Article 301A: Freedom of trade, commerce, and intercourse on and after the commencement of the Constitution (Forty-fourth Amendment) Act, 1978": "Article 301A addresses the freedom of trade, commerce, and intercourse after the commencement of the Constitution (Forty-fourth Amendment) Act, 1978.",
+
+"Article 302: Power of Parliament to impose restrictions on trade, commerce, and intercourse": "Article 302 grants Parliament the power to impose restrictions on trade, commerce, and intercourse for the public interest.",
+
+"Article 303: Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce": "Article 303 places certain restrictions on the legislative powers of the Union and states concerning trade and commerce.",
+
+"Article 304: Restrictions on trade, commerce, and intercourse among States": "Article 304 deals with restrictions on trade, commerce, and intercourse among states.",
+
+"Article 305: Saving of existing laws and laws providing for State monopolies": "Article 305 saves existing laws and laws that provide for state monopolies.",
+
+"Article 306: Power of certain States in Part B of the First Schedule to impose restrictions on trade and commerce": "Article 306 grants certain Part B states the power to impose restrictions on trade and commerce.",
+
+"Article 307: Appointment of authority for carrying out the purposes of Articles 301 to 304": "Article 307 provides for the appointment of authorities to carry out the purposes of Articles 301 to 304.",
+
+"Article 308: Interpretation": "Article 308 addresses questions of interpretation regarding the freedom of trade, commerce, and intercourse.",
+
+"Article 309: Recruitment and conditions of service of persons serving the Union or a State": "Article 309 deals with the recruitment and conditions of service of persons serving the Union or a state.",
+
+"Article 310: Tenure of office of persons serving the Union or a State": "Article 310 outlines the tenure of office of persons serving the Union or a state.",
+
+"Article 311: Dismissal, removal, or reduction in rank of persons employed in civil capacities under the Union or a State": "Article 311 provides safeguards against dismissal, removal, or reduction in rank of certain government employees.",
+
+"Article 312: All-India services": "Article 312 empowers Parliament to create All-India services for the Union and the states.",
+
+"Article 313: Transitional provisions": "Article 313 contains transitional provisions related to the continuance of certain laws and agreements.",
+
+"Article 314: Annual financial statement": "Article 314 requires the presentation of an annual financial statement before the Parliament.",
+
+"Article 315: Public Service Commissions for the Union and for the States": "Article 315 deals with the establishment of Public Service Commissions for the Union and the states.",
+
+"Article 316: Appointment and term of office of members": "Article 316 outlines the appointment and term of office of members of Public Service Commissions.",
+
+"Article 317: Removal and suspension of a member of a Public Service Commission": "Article 317 covers the removal and suspension of members of Public Service Commissions.",
+
+"Article 318: Power to make regulations as to conditions of service of members and staff of the Commission": "Article 318 empowers the President to make regulations regarding the conditions of service of members and staff of the Commission.",
+
+"Article 319: Prohibition as to the holding of offices by members of Commission on ceasing to be such members": "Article 319 prohibits members of the Commission from holding certain offices after ceasing to be members.",
+
+"Article 320: Functions of Public Service Commissions": "Article 320 outlines the functions of Public Service Commissions in matters of recruitment and appointments.",
+
+"Article 321: Power to extend functions of Public Service Commissions": "Article 321 allows the President to extend the functions of a Public Service Commission.",
+
+"Article 322: Expenses of Public Service Commissions": "Article 322 covers the expenses of Public Service Commissions and their charging to the Consolidated Fund of the State.",
+
+"Article 323: Reports of Public Service Commissions": "Article 323 deals with the submission of reports by Public Service Commissions to the President.",
+
+"Article 323A: Administrative tribunals": "Article 323A provides for the establishment of administrative tribunals for the adjudication of disputes related to recruitment and conditions of service.",
+
+"Article 323B: Tribunals for other matters": "Article 323B allows for the establishment of tribunals for matters other than those mentioned in Article 323A.",
+
+"Article 324: Superintendence, direction, and control of elections to be vested in an Election Commission": "Article 324 vests the superintendence, direction, and control of elections in an independent Election Commission.",
+
+"Article 325: No person to be ineligible for inclusion in, or to claim to be included in a special, electoral roll on grounds of religion, race, caste, or sex": "Article 325 ensures that no person is ineligible for inclusion in electoral rolls on the basis of religion, race, caste, or sex.",
+
+"Article 326: Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult suffrage": "Article 326 establishes the principle of adult suffrage for elections to the House of the People and State Legislative Assemblies.",
+
+"Article 327: Power of Parliament to make provisions with respect to elections to Legislatures": "Article 327 empowers Parliament to make provisions regarding elections to Legislatures, including the delimitation of constituencies.",
+
+"Article 328: Power of the Legislature of a State to make provisions with respect to elections to such Legislature": "Article 328 grants state legislatures the power to make provisions regarding their own elections.",
+
+"Article 329: Bar to interference by courts in electoral matters": "Article 329 restricts the jurisdiction of courts in matters related to elections.",
+
+"Article 330: Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People": "Article 330 provides for the reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People.",
+
+"Article 331: Representation of the Anglo-Indian community in the House of the People": "Article 331 allows for the representation of the Anglo-Indian community in the House of the People.",
+
+"Article 332: Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of States": "Article 332 provides for the reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of States.",
+
+"Article 333: Representation of the Anglo-Indian community in the Legislative Assemblies of States": "Article 333 allows for the representation of the Anglo-Indian community in the Legislative Assemblies of States.",
+
+"Article 334: Reservation of seats and special representation to cease after seventy years": "Article 334 stipulates that the reservation of seats for Scheduled Castes, Scheduled Tribes, and Anglo-Indians in the House of the People and State Legislative Assemblies shall cease after seventy years from the commencement of the Constitution.",
+
+"Article 335: Claims of Scheduled Castes and Scheduled Tribes to services and posts": "Article 335 addresses the claims of Scheduled Castes and Scheduled Tribes to services and posts in government employment.",
+
+"Article 336: Special provision for Anglo-Indian community in certain services": "Article 336 provides for special provisions for the Anglo-Indian community in certain government services.",
+
+"Article 337: Special provision with respect to educational grants for the benefit of Anglo-Indian community": "Article 337 allows for special provisions with respect to educational grants for the benefit of the Anglo-Indian community.",
+
+"Article 338: National Commission for Scheduled Castes": "Article 338 establishes the National Commission for Scheduled Castes to promote and protect the rights and interests of Scheduled Castes.",
+
+"Article 338A: National Commission for Scheduled Tribes": "Article 338A establishes the National Commission for Scheduled Tribes to promote and protect the rights and interests of Scheduled Tribes.",
+
+"Article 339: Control of the Union over the administration of Scheduled Areas and the welfare of Scheduled Tribes": "Article 339 grants the Union the power to control the administration of Scheduled Areas and promote the welfare of Scheduled Tribes.",
+
+"Article 340: Appointment of a Commission to investigate the conditions of socially and educationally backward classes": "Article 340 allows for the appointment of a Commission to investigate the conditions of socially and educationally backward classes and make recommendations.",
+
+"Article 341: Scheduled Castes": "Article 341 empowers the President to specify the Scheduled Castes for a particular state or Union territory.",
+
+"Article 342: Scheduled Tribes": "Article 342 empowers the President to specify the Scheduled Tribes for a particular state or Union territory.",
+
+"Article 343: Official language of the Union": "Article 343 designates Hindi as the official language of the Union, with provisions for the use of English for official purposes.",
+
+"Article 344: Commission and Committee of Parliament on official language": "Article 344 provides for the appointment of a Commission and a Committee of Parliament on official language to make recommendations.",
+
+"Article 345: Official language or languages of a State": "Article 345 permits states to specify their official language or languages, and the use of other languages for official purposes.",
+
+"Article 346: Official language for communication between one State and another or between a State and the Union": "Article 346 addresses the official language used for communication between states and between a state and the Union.",
+
+"Article 347: Special provision relating to language spoken by a section of the population of a State": "Article 347 allows a state to make special provisions for the use of a language spoken by a section of its population.",
+
+"Article 348: Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc.": "Article 348 deals with the language to be used in the Supreme Court, High Courts, and for Acts, Bills, etc.",
+
+"Article 349: Special provision relating to the use of language spoken by a section of the population of a State for official purposes of that State": "Article 349 permits states to make special provisions for the use of a language spoken by a section of its population for official purposes.",
+
+"Article 350: Language to be used in representations for redress of grievances": "Article 350 ensures that individuals can use their preferred language for making representations for the redress of grievances.",
+
+"Article 350A: Facilities for instruction in mother-tongue at primary stage": "Article 350A provides for facilities for instruction in the mother-tongue at the primary education stage.",
+
+"Article 350B: Special Officer for linguistic minorities": "Article 350B allows for the appointment of a Special Officer for linguistic minorities to safeguard their rights.",
+
+"Article 351: Directive for development of the Hindi language": "Article 351 issues a directive for the development and promotion of the Hindi language.",
+
+"Article 352: Proclamation of Emergency": "Article 352 outlines the provisions for the proclamation of a state of emergency.",
+
+"Article 353: Effect of Proclamation of Emergency": "Article 353 specifies the effect of a proclamation of emergency on the executive authority of the states.",
+
+"Article 354: Application of provisions relating to distribution of revenues while a Proclamation of Emergency is in operation": "Article 354 deals with the application of provisions related to the distribution of revenues during a Proclamation of Emergency.",
+
+"Article 355: Duty of the Union to protect States against external aggression and internal disturbance": "Article 355 places a duty on the Union to protect states against external aggression and internal disturbance.",
+
+"Article 356: Provisions in case of failure of constitutional machinery in States": "Article 356 allows the President to impose President's Rule in a state if there is a failure of constitutional machinery.",
+
+"Article 357: Exercise of legislative powers under Proclamation issued under Article 356": "Article 357 empowers Parliament to make laws for a state under President's Rule.",
+
+"Article 358: Suspension of provisions of Article 19 during emergencies": "Article 358 suspends the operation of Article 19 during a state of emergency.",
+
+"Article 359: Suspension of the enforcement of the rights conferred by Part III during emergencies": "Article 359 allows the President to suspend the enforcement of certain fundamental rights during an emergency.",
+
+"Article 360: Provisions as to financial emergency": "Article 360 deals with provisions related to a financial emergency.",
+
+"Article 361: Protection of President and Governors and Rajpramukhs": "Article 361 provides immunity to the President, Governors, and Rajpramukhs from certain legal proceedings.",
+
+"Article 361A: Protection of publication of proceedings of Parliament and State Legislatures": "Article 361A protects the publication of proceedings of Parliament and State Legislatures from legal proceedings.",
+
+"Article 362: Protection of President and Governors and Rajpramukhs in respect of acts done during the discharge of their official duties": "Article 362 provides protection to the President, Governors, and Rajpramukhs for acts done in the discharge of their official duties.",
+
+"Article 363: Bar to interference by courts in disputes arising out of certain treaties, agreements, etc.": "Article 363 restricts the jurisdiction of courts in disputes arising out of certain treaties, agreements, and covenants.",
+
+"Article 364: Special provisions as to major ports and aerodromes": "Article 364 contains special provisions regarding major ports and aerodromes.",
+
+"Article 365: Effect of failure to comply with, or to give effect to, directions given by the Union": "Article 365 addresses the consequences of a state's failure to comply with or give effect to directions issued by the Union.",
+
+"Article 366: Definitions": "Article 366 provides definitions for various terms used in the Constitution.",
+
+"Article 366A: Special provision as to the State of Nagaland": "Article 366A contains special provisions regarding the State of Nagaland.",
+
+"Article 366B: Special provision as to the State of Assam": "Article 366B contains special provisions regarding the State of Assam.",
+
+"Article 366C: Definitions of laws": "Article 366C provides definitions for laws related to the State of Manipur.",
+
+"Article 366D: Special provision as to the State of Andhra Pradesh": "Article 366D contains special provisions regarding the State of Andhra Pradesh.",
+
+"Article 366E: Definitions of laws": "Article 366E provides definitions for laws related to the State of Telangana.",
+
+"Article 367: Interpretation": "Article 367 addresses questions of interpretation of the Constitution.",
+
+"Article 368: Power of Parliament to amend the Constitution and procedure thereof": "Article 368 outlines the power of Parliament to amend the Constitution and the procedure for doing so.",
+
+"Article 369: Temporary power to Parliament to make laws with respect to certain matters in the State List as if they were matters in the Concurrent List": "Article 369 grants temporary power to Parliament to make laws on certain matters in the State List as if they were in the Concurrent List.",
+
+"Article 370: Temporary provisions with respect to the State of Jammu and Kashmir": "Article 370 contains temporary provisions related to the State of Jammu and Kashmir.",
+
+"Article 371: Special provisions with respect to the States of Maharashtra and Gujarat": "Article 371 provides special provisions for the States of Maharashtra and Gujarat.",
+
+"Article 371A: Special provision with respect to the State of Nagaland": "Article 371A contains special provisions for the State of Nagaland.",
+
+"Article 371B: Special provision with respect to the State of Assam": "Article 371B contains special provisions for the State of Assam.",
+
+"Article 371C: Special provision with respect to the State of Manipur": "Article 371C contains special provisions for the State of Manipur.",
+
+"Article 371D: Special provisions with respect to the State of Andhra Pradesh": "Article 371D contains special provisions for the State of Andhra Pradesh.",
+
+"Article 371E: Establishment of Central University in Andhra Pradesh": "Article 371E provides for the establishment of a Central University in Andhra Pradesh.",
+
+"Article 371F: Special provisions with respect to the State of Sikkim": "Article 371F contains special provisions for the State of Sikkim.",
+
+"Article 371G: Special provision with respect to the State of Mizoram": "Article 371G contains special provisions for the State of Mizoram.",
+
+"Article 371H: Special provision with respect to the State of Arunachal Pradesh": "Article 371H contains special provisions for the State of Arunachal Pradesh.",
+
+"Article 371I: Special provisions with respect to the State of Goa": "Article 371I contains special provisions for the State of Goa.",
+
+"Article 371J: Special provisions with respect to the State of Karnataka": "Article 371J contains special provisions for the State of Karnataka.",
+
+"Article 372: Continuance in force of existing laws and their adaptation": "Article 372 provides for the continuance in force of existing laws and their adaptation.",
+
+"Article 373: Power of the President to make orders in respect of persons under preventive detention in certain cases": "Article 373 empowers the President to make orders in cases of preventive detention.",
+
+"Article 374: Provisions as to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council": "Article 374 deals with provisions related to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council.",
+
+"Article 375: Courts, authorities, and officers to continue to function subject to the provisions of the Constitution": "Article 375 ensures the continued functioning of courts, authorities, and officers subject to the provisions of the Constitution.",
+
+"Article 376: Provisions as to Judges of High Courts": "Article 376 contains provisions related to Judges of High Courts.",
+
+"Article 377: Provisions as to the Comptroller and Auditor-General of India": "Article 377 addresses provisions related to the Comptroller and Auditor-General of India.",
+
+"Article 378: Provisions as to the Public Service Commissions": "Article 378 deals with provisions related to the Public Service Commissions.",
+
+"Article 379: Oath or affirmation by the Judges of the Supreme Court and the Judges of the High Courts": "Article 379 prescribes the oath or affirmation to be taken by Judges of the Supreme Court and High Courts.",
+
+"Article 380: Oath or affirmation by the Governor of a State": "Article 380 prescribes the oath or affirmation to be taken by the Governor of a State.",
+
+"Article 381: Oath of office by the President": "Article 381 prescribes the oath of office to be taken by the President.",
+
+"Article 382: Oath of secrecy": "Article 382 mandates an oath of secrecy for individuals who have access to certain official information.",
+
+"Article 383: Oath or affirmation by members of Parliament": "Article 383 prescribes the oath or affirmation to be taken by members of Parliament.",
+
+"Article 384: Oath or affirmation by members of the Legislature of States": "Article 384 prescribes the oath or affirmation to be taken by members of the Legislature of States.",
+
+"Article 385: Oath of office by Ministers for the Union and for the States": "Article 385 mandates the oath of office to be taken by Ministers for the Union and for the states.",
+
+"Article 386: Oath of secrecy": "Article 386 mandates an oath of secrecy for individuals who have access to certain official information.",
+
+"Article 387: Oath or affirmation by judges of the Supreme Court and of the High Courts": "Article 387 prescribes the oath or affirmation to be taken by judges of the Supreme Court and High Courts.",
+
+"Article 388: Oath of office by the Chief Justice of India": "Article 388 prescribes the oath of office to be taken by the Chief Justice of India.",
+
+"Article 389: Oath or affirmation by persons appointed to act as, or to exercise the functions of, a Judge of the Supreme Court or of a High Court": "Article 389 prescribes the oath or affirmation to be taken by persons appointed to act as, or to exercise the functions of, a Judge of the Supreme Court or a High Court.",
+
+"Article 390: Oath of secrecy": "Article 390 mandates an oath of secrecy for individuals who have access to certain official information.",
+
+"Article 391: Oath or affirmation by the President and Governor of a State and by ministers for the Union and for the States": "Article 391 prescribes the oaths or affirmations to be taken by the President, Governor of a State, and ministers for the Union and for the states.",
+
+"Article 392: Oath of secrecy": "Article 392 mandates an oath of secrecy for individuals who have access to certain official information.",
+
+"Article 393: Interpretation": "Article 393 addresses questions of interpretation related to the oaths and affirmations prescribed in the Constitution.",
+
+"Article 394: Succession to the Dominion of India": "Article 394 specifies the succession to the Dominion of India.",
+
+"Article 395: Repeals": "Article 395 states that certain laws and provisions are repealed, and the text of the Government of India Act, 1935, as amended, shall be construed as part of the Constitution.",
 
 }
-
-
 def get_article_summary(article_prefix):
     for key in articles_and_summaries:
         if key.startswith(article_prefix):
