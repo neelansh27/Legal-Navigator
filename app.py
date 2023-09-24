@@ -79,23 +79,27 @@ def login():
                 if row[0] == username and row[1] == password:
                     session['username'] = username
                     flash('Login successful!', 'success')
-                    return redirect(url_for('index'))
+                    return redirect(url_for('home'))
 
         flash('Invalid username or password. Please try again.', 'error')
-        return redirect(url_for('index'))
+        return redirect(url_for('login'))
     return render_template("login.html")
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        username = request.form.get("username")
+        print(username)
+        password = request.form.get('password')
 
         with open("sample.csv", mode='r') as file:
             csv_reader = csv.reader(file)
             for row in csv_reader:
-                if row[0] == username:
+                if row==[]:
+                    break
+
+                elif row[0] == username:
                     flash('Username already exists. Please choose a different username.', 'error')
                     return redirect(url_for('signup'))
 
@@ -104,7 +108,7 @@ def signup():
             csv_writer.writerow([username, password])
 
         flash('Account created successfully. You can now log in.', 'success')
-        return redirect(url_for('index'))
+        return redirect(url_for('login'))
 
     return render_template('signup.html')
 
@@ -139,6 +143,17 @@ def serve_pdf(filename):
     except FileNotFoundError:
         return "PDF not found", 404
 
+@app.route('/ExpertTalk')
+def experts():
+    return render_template("expert_talk.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+@app.route('/logout')
+def logout():
+    return redirect("login")
 with app.app_context():
     db.create_all()
 

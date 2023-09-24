@@ -9,32 +9,22 @@
 </head>
 
 <body>
-
-    <head>
-        <nav>
-            <ul>
-                <li class="nonsub"><b>Project Name</b></li>
-                <li class="sub">option 1</li>
-                <li class="sub">option 2</li>
-                <li class="sub">option 3</li>
-            </ul>
-        </nav>
-    </head>
     <main>
         <div class="back">
             <div class="login-form">
                 <h1>signup</h1>
-                <form action="#" method="post"></form>
+                <form method="post">
                 <p>Username</p>
-                <input type="text" name="user" placeholder="User Name">
-                <p>email</p>
-                <input type="text" name="email" placeholder="email address">
+                <input type="text" name="username" placeholder="User Name">
+                <!-- <p>email</p> -->
+                <!-- <input type="text" name="email" placeholder="email address"> -->
                 <p>Password</p>
                 <input type="password" name="password" placeholder="Password">
                 <p>Retype Password</p>
                 <input type="password" name="repass" placeholder="Re-entered Password">
                 <button type="submit">Signup</button>
-                <a href="login.html" class="hyper">already a user ? Click Here to Login</a>
+                <a href="{{ url_for('login') }}" class="hyper">already a user ? Click Here to Login</a>
+                </form>
             </div>
             
         </div>

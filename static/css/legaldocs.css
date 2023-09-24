@@ -9,7 +9,6 @@ nav {
 }
 
 ul {
-    border: 2px solid black;
     height: 60px;
     position: sticky;
     top: 0;
@@ -29,8 +28,8 @@ li {
 .sub {
     position: relative;
     font-size: larger;
-    margin: 45px;
-    left: 500px;
+    margin: 25px;
+    left: 40rem;
     top: 15px;
 }
 

@@ -1,113 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Expert Talk</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="navBar.css" />
-    <link rel="stylesheet" type="text/css" href="expert_talk.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navBar">
-        <div class="logo">
-          <a href="#">LegalNavigator</a>
-        </div>
-        <ul class="navLinks">
-          <li class="navHead">option 1</li>
-          <li class="navHead">option 2</li>
-          <li class="navHead">option 3</li>
-        </ul>
-      </nav>
-    </header>
+{% extends "base.html" %}
+{% block title %}Expert Assistance{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static',filename='css/expert_talk.css') }}" />
+{% endblock %}
+{% block body %}
     <main>
-      <div class="topBar">
-        <div class="heading">Connect with Experts</div>
-        <div class="filters">
-          <button class="fbtn">filter</button>
+        <div class="topBar">
+            <div class="heading">Connect with Experts</div>
+            <div class="filters">
+                <button class="fbtn">filter</button>
+            </div>
         </div>
-      </div>
-      <section class="cards-container">
-        <div class="card">
-          <div class="img-container">
-            <img src="person.png" alt="logo" />
-          </div>
-          <div class="details">
-            <div class="name">Neelansh Sharma</div>
-            <div class="id">Id: 8871257</div>
-            <div class="specialization">Specializatin: Criminal</div>
-            <div class="experience">Experience: 6 months</div>
-            <button class="connect">Connect</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img src="person.png" alt="logo" />
-          </div>
-          <div class="details">
-            <div class="name">Neelansh Sharma</div>
-            <div class="id">Id: 8871257</div>
-            <div class="specialization">Specializatin: Criminal</div>
-            <div class="experience">Experience: 6 months</div>
-            <button class="connect">Connect</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img src="person.png" alt="logo" />
-          </div>
-          <div class="details">
-            <div class="name">Neelansh Sharma</div>
-            <div class="id">Id: 8871257</div>
-            <div class="specialization">Specializatin: Criminal</div>
-            <div class="experience">Experience: 6 months</div>
-            <a href="#">
-            <button class="connect">Connect</button>
-            </a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img src="person.png" alt="logo" />
-          </div>
-          <div class="details">
-            <div class="name">Neelansh Sharma</div>
-            <div class="id">Id: 8871257</div>
-            <div class="specialization">Specializatin: Criminal</div>
-            <div class="experience">Experience: 6 months</div>
-            <button class="connect">Connect</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img src="person.png" alt="logo" />
-          </div>
-          <div class="details">
-            <div class="name">Neelansh Sharma</div>
-            <div class="id">Id: 8871257</div>
-            <div class="specialization">Specializatin: Criminal</div>
-            <div class="experience">Experience: 6 months</div>
-            <button class="connect">Connect</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img-container">
-            <img src="person.png" alt="logo" />
-          </div>
-          <div class="details">
-            <div class="name">Neelansh Sharma</div>
-            <div class="id">Id: 8871257</div>
-            <div class="specialization">Specializatin: Criminal</div>
-            <div class="experience">Experience: 6 months</div>
-            <button class="connect">Connect</button>
-          </div>
-        </div>
-      </section>
+        <section class="cards-container">
+            <div class="card">
+                <div class="img-container">
+                    <img src="{{ url_for('static', filename='img/person.png') }}" alt="logo" />
+                </div>
+                <div class="details">
+                    <div class="name">Neelansh Sharma</div>
+                    <div class="id">Id: 8871257</div>
+                    <div class="specialization">Specializatin: Criminal</div>
+                    <div class="experience">Experience: 6 months</div>
+                    <a href="https://www.linkedin.com/in/neelansh-sharma-71742b258/"
+                       target="_blank">
+                        <button class="connect">Connect</button>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="{{ url_for('static', filename='img/person.png') }}" alt="logo" />
+                </div>
+                <div class="details">
+                    <div class="name">Sanjay Sharma</div>
+                    <div class="id">Id: 9871259</div>
+                    <div class="specialization">Specializatin: Criminall</div>
+                    <div class="experience">Experience: 12 years</div>
+                    <a href="https://www.linkedin.com/in/neelansh-sharma-71742b258/"
+                       target="_blank">
+                        <button class="connect">Connect</button>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src="{{url_for( 'static',filename='img/person.png') }}" alt="logo" />
+                </div>
+                <div class="details">
+                    <div class="name">Gopal Srivastav</div>
+                    <div class="id">Id: 885342</div>
+                    <div class="specialization">Specializatin: Taxation</div>
+                    <div class="experience">Experience: 6 months</div>
+                    <a href="https://www.linkedin.com/in/neelansh-sharma-71742b258/"
+                       target="_blank">
+                        <button class="connect">Connect</button>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+{% endblock %}

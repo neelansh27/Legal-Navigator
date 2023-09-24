@@ -17,8 +17,8 @@
             need it.
           </div>
           <div class="btns">
-            <a href="#"><button class="auth">Login</button></a>
-            <a href="#"><button class="auth-outline">Register</button></a>
+              <a href="{{ url_for('login') }}"><button class="auth">Login</button></a>
+              <a href="{{ url_for('signup') }}"><button class="auth-outline">Register</button></a>
           </div>
         </div>
         <img src="{{url_for('static',filename='img/balance.png')}}" alt="balance" class="balance" />

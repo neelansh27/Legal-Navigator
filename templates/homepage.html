@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block head %}
+{{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/homepage.css') }}">
-    <title>Home</title>
-</head>
-<body>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navBar2.css') }}">
+{% endblock %}
+{% block nav %}
     <nav>
         <ul>
-            <li class="nonsub"><b>LegalNavigator</b></li>
-            <li class="sub">Home</li>
-            <li class="sub">option 2</li>
-            <li class="sub">option 3</li>
+            <li class="nonsub"><b><a class="nosub" href="{{ url_for('home') }}">LegalNavigator</a></b></li>
+            <li class="sub"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="sub"><a href="{{ url_for('about') }}">About Us</a></li>
+            <li class="sub"><a href="{{ url_for('logout') }}">logout</a></li>
         </ul>
     </nav>
+    {% endblock %}
+{% block body %}
     <div class="heading-div">
         <h1 class="heading-text">WELCOME TO LEGAL-NAVIGATOR</h1>
         <div class="para"><p>Explore Our Services</p></div>
@@ -25,7 +26,7 @@
                 <img src="" alt="" style="width:100%">
                 <div class="container">
                     <h1>List of Legal Documents</h1>
-                    <p><button>Click For More Information</button></p>
+                    <p><a href="{{url_for("LegalDocuments")}}"><button>Click For More Information</button></a></p>
                 </div>
             </div>
         </div>
@@ -34,7 +35,7 @@
                 <img src="" alt="" style="width:100%">
                 <div class="container">
                     <h1>ChatBot</h1>
-                    <p><button>Click For More Information</button></p>
+                    <p><a href="{{url_for("chatbot")}}"><button>Click For More Information</button></a></p>
                 </div>
             </div>
         </div>
@@ -43,7 +44,7 @@
                 <img src="" alt="" style="width:100%">
                 <div class="container">
                     <h1>Summarize a Legal Text</h1>
-                    <p><button>Click For More Information</button></p>
+                    <p><a href="{{url_for("summary")}}"><button>Click For More Information</button></a></p>
                 </div>
             </div>
         </div>
@@ -52,7 +53,7 @@
                 <img src="" alt="" style="width:100%">
                 <div class="container">
                     <h1>View all Cases</h1>
-                    <p><button>Click For More Information</button></p>
+                    <p><a href="{{url_for("caseInfo")}}"><button>Click For More Information</button></a></p>
                 </div>
             </div>
         </div>
@@ -61,10 +62,9 @@
                 <img src="" alt="" style="width:100%">
                 <div class="container">
                     <h1>Talk with an Expert</h1>
-                    <p><button>Click For More Information</button></p>
+                    <p><a href="{{url_for("experts")}}"><button>Click For More Information</button></a></p>
                 </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+    {% endblock %}

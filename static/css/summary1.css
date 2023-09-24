@@ -10,7 +10,7 @@ nav {
 }
 
 ul {
-    border: 2px solid black;
+    border-bottom: 2px solid black;
     height: 60px;
     position: sticky;
     top: 0;
@@ -20,7 +20,7 @@ li {
     position: relative;
     top: 15px;
     display: inline;
-    margin: 17px;
+    margin: 10px;
 }
 
 .nonsub {
@@ -30,8 +30,8 @@ li {
 .sub {
     position: relative;
     font-size: larger;
-    margin: 45px;
-    left: 500px;
+    margin: 25px;
+    left: 40rem;
     top: 15px;
 }
 
@@ -88,8 +88,7 @@ h1 {
     line-height: 25px;
 }
 
-.btn-1:hover,
-a:hover {
+.btn-1:hover{
     background-color: grey;
     color: white;
     text-align: center;

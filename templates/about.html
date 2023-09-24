@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block nav %}
+    <nav>
+        <ul>
+            <li class="nonsub"><b><a class="nosub" href="{{ url_for('home') }}">LegalNavigator</a></b></li>
+            <li class="sub"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="sub"><a href="{{ url_for('about') }}">About Us</a></li>
+            <li class="sub"><a href="{{ url_for('logout') }}">logout</a></li>
+        </ul>
+    </nav>
+{% endblock %}
+{% block body %}
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p></p>
+        <p></p>
+    </div>
+
+    <h2 class="subhead" style="text-align:center">The Idea</h2>
+    <div class="idea">
+        <p style="text-align:center">
+            Our Idea has the potential to transform how legal documents are understood and utilized by individuals and
+            businesses alike.
+            Our team's collaborative efforts have resulted in a platform that simplifies complex legal language, making
+            it accessible to a wider audience.
+        </p>
+    </div>
+    <h2 style="text-align:center">Team Members</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Anirudh Singh</h2>
+                    <p class="title"></p>
+                    <p>Frontend</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Tanvi Khandelwal</h2>
+                    <p class="title"></p>
+                    <p>Backend</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Neelansh</h2>
+                    <p class="title"></p>
+                    <p>Frontend</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Shlok Arora</h2>
+                    <p class="title"></p>
+                    <p>Backend</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Shivang Rustagi</h2>
+                    <p class="title"></p>
+                    <p>Backend</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="" alt="" style="width:100%">
+                <div class="container">
+                    <h2>Aryan Jain</h2>
+                    <p class="title"></p>
+                    <p>Frontend</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endblock %}

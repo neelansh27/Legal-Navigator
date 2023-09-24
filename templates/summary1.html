@@ -1,19 +1,22 @@
-{% extends "base.html"%}
-{% block title %} Summary {% endblock %}
+{% extends "base.html" %}
+{% block title %}Summary{% endblock %}
 {% block head %}
-{{ super() }}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/summary1.css') }}">
+    {{ super() }}
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static',filename='css/summary1.css') }}">
+
 {% endblock %}
 {% block nav %}
     <nav>
         <ul>
-            <li class="nonsub"><b>LegalNavigator</b></li>
-            <li class="sub">Home</li>
-            <li class="sub">option 2</li>
-            <li class="sub">option 3</li>
+            <li class="nonsub"><b><a class="nosub" href="{{ url_for('home') }}">LegalNavigator</a></b></li>
+            <li class="sub"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="sub"><a href="{{ url_for('about') }}">About Us</a></li>
+            <li class="sub"><a href="{{ url_for('logout') }}">logout</a></li>
         </ul>
     </nav>
-{% endblock%}
+    {% endblock %}
 {% block body %}
     <div class="summary-body">
         <div class="summary">
@@ -21,10 +24,10 @@
                 <h3>Enter The Article Number Here</h3>
             </div>
             <form method="POST">
-            <div class="search-bar">
-                <input type="search" id="site-search" name="q" />
-                <button type="submit" class="btn-1">Search</button>
-            </div>
+                <div class="search-bar">
+                    <input type="search" id="site-search" name="q" />
+                    <button type="submit" class="btn-1">Search</button>
+                </div>
             </form>
             <div class="title">
                 <h1>Article Summary</h1>
@@ -32,14 +35,13 @@
             <div class="output">
                 <div class="para">
                     {% if article %}
-                    <h3>{{ title }}</h3>
-                    <p> {{ article }}</p>
+                        <h3>{{ title }}</h3>
+                        <p>{{ article }}</p>
                     {% else %}
-                    <p>Search An Article</p>
+                        <p>Search An Article</p>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
 {% endblock %}
-
