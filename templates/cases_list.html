@@ -1,65 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Case List</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="navBar.css">
-    <link rel="stylesheet" type="text/css" href="cases_list.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navBar">
-        <div class="logo">
-          <a href="#">Project Name</a>
-        </div>
-        <ul class="navLinks">
-          <li class="navHead">option 1</li>
-          <li class="navHead">option 2</li>
-          <li class="navHead">option 3</li>
-        </ul>
-      </nav>
-    </header>
-
+{% extends "base.html" %}
+{% block title %}Case List{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static',filename='css/cases_list.css') }}">
+{% endblock %}
+{% block body %}
     <main>
-      <div class="topBar">
-        <div class="heading">List of Cases</div>
-        <div class="filters">
-          <button class="fbtn">filter</button>
+        <div class="topBar">
+            <div class="heading">List of Cases</div>
+            <div class="filters">
+                <button class="fbtn">filter</button>
+            </div>
         </div>
-      </div>
-      <ul>
-        <li>
-          <h2>This is Testing 1</h2>
-          <div class="status">Status:Open</div>
-          <div class="opening">Opened on: 30-2-1969</div>
-        </li>
-        <li>
-          <h2>This is Testing 2</h2>
-          <div class="status">Status:Open</div>
-          <div class="opening">Opened on: 30-2-1969</div>
-        </li>
-        <li>
-          <h2>This is Testing 3</h2>
-          <div class="status">Status:Open</div>
-          <div class="opening">Opened on: 30-2-1969</div>
-        </li>
-        <li>
-          <h2>This is Testing 4</h2>
-          <div class="status">Status:Open</div>
-          <div class="opening">Opened on: 30-2-1969</div>
-        </li>
-        <li>
-          <h2>This is Testing 5</h2>
-          <div class="status">Status:Open</div>
-          <div class="opening">Opened on: 30-2-1969</div>
-        </li>
-      </ul>
+        <ul>
+            {% if cases %}
+                {{ cases }}
+            {% else %}
+                <li>
+                    <h2>No active cases</h2>
+                    <div class="status">Status:Open</div>
+                    <div class="opening">Opened on: 30-2-1969</div>
+                </li>
+            {% endif %}
+        </ul>
     </main>
-  </body>
-</html>
+{% endblock %}

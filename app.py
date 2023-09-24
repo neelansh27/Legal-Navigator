@@ -81,6 +81,10 @@ def casinfo():
     result=case.Show_Case_Info(username)
     return result
 
+@app.route("/caseList")
+def caseInfo():
+    return render_template('cases_list.html')
+
 @app.route('/FIR')
 def firpdf():
     # List all PDF files in the folder
