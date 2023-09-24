@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Project</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="navBar.css">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
     <header>
       <nav class="navBar">
         <div class="logo">
@@ -40,8 +33,7 @@
             <a href="#"><button class="auth-outline">Register</button></a>
           </div>
         </div>
-        <img src="balance.png" alt="balance" class="balance" />
+        <img src="{{url_for('static',filename='img/balance.png')}}" alt="balance" class="balance" />
       </div>
     </main>
-  </body>
-</html>
+    {% endblock %}
