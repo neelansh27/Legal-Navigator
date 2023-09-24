@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/chatbot.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>chatbot</title>
+</head>
+<body>
+    <head>
+        <nav>
+            <ul>
+                <li class="nonsub"><a href="{{ url_for('home') }}"><b>LegalNavigator</b></a></li>
+                <li class="sub"><a href="{{ url_for('home') }}">Home</a></li>
+                <li class="sub">About Us</li>
+                <li class="sub">Logout</li>
+            </ul>
+        </nav>
+    </head>
+    <main>
+        <div class="chatbox-wrapper">
+            <div class="message-box">
+              <div class="chat response">
+                <span>Hello there! <br> 
+                  How can I help you today.
+                </span>
+              </div>
+              <form method="post">
+              {% if chat %}
+                <input type="hidden" name="chat" id='chat'/>
+                {% for message in chat %}
+                    <div class="input chat">{{ message[0] }}</div>
+                    <div class="output chat response">{{ message[1] }}</div>
+                {% endfor %} 
+              {% endif %}
+            </div>
+            <div class="messagebar">
+              <div class="bar-wrapper">
+                <input type="text" name='user-msg' placeholder="Enter your message..." autocomplete="off">
+                <button>
+                  <span class="material-symbols-rounded">
+                    send
+                    </span>
+                </button>
+              </div>
+            </div>
+          </div>
+              </form>
+    </main>
+</body>
+<script>
+        const input = document.querySelectorAll('.input');
+        const output = document.querySelectorAll('.output');
+        let contentArray = [];
+
+        for (let i=0;i<input.length;i++){
+            contentArray.push([input[i].textContent,output[i].textContent])
+        }
+        document.getElementById("chat").value = JSON.stringify(contentArray);
+</script>
+</html>

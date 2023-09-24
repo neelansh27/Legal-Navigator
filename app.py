@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory,request, redirect, flash,url_for,session
+from flask import Flask, json, render_template, send_from_directory,request, redirect, flash,url_for,session
 from flask_sqlalchemy import SQLAlchemy
 import chatbot3 as cb
 # import pySQLcase as case
@@ -46,34 +46,44 @@ Session(app)
 
 
 @app.route('/')
-def home():
+def index():
     return render_template('entry_point.html')
 
+@app.route('/home')
+def home():
+    return render_template('homepage.html')
 @app.route('/chatbot',methods=['GET', 'POST'])
 def chatbot():
-    while True:
-        if request.method== "POST":
-            user_input = request.form["input"]
-            if user_input.lower() == "exit":
-                    break
-    response = cb.chatbot_response(user_input)
-    return response;
+    if request.method== "POST":
+        user_input = request.form.get("user-msg")
+        chat= request.form.get("chat")
+        if chat:
+            chat=json.loads(chat)
+        else:
+            chat=[]
+        response = cb.chatbot_response(user_input)
+        chat.append([user_input,response])
+        return render_template("chatbot.html",chat=chat)
+    return render_template("chatbot.html")
 
-@app.route('/login', methods=['POST'])
+
+@app.route('/login', methods=['POST','GET'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
 
-    with open("sample.csv", mode='r') as file:
-        csv_reader = csv.reader(file)
-        for row in csv_reader:
-            if row[0] == username and row[1] == password:
-                session['username'] = username
-                flash('Login successful!', 'success')
-                return redirect(url_for('index'))
+        with open("sample.csv", mode='r') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                if row[0] == username and row[1] == password:
+                    session['username'] = username
+                    flash('Login successful!', 'success')
+                    return redirect(url_for('index'))
 
-    flash('Invalid username or password. Please try again.', 'error')
-    return redirect(url_for('index'))
+        flash('Invalid username or password. Please try again.', 'error')
+        return redirect(url_for('index'))
+    return render_template("login.html")
 
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -100,9 +110,11 @@ def signup():
 
 @app.route("/summary",methods=['GET', 'POST'])
 def summary():
-    selected_article= request.form["article"]
-    result=summ.get_article_summary(selected_article)
-    return result
+    if request.method=='POST':
+        article=request.form.get('q')
+        title,result=summ.get_article_summary("Article "+article)
+        return render_template("summary1.html",title=title.split(':')[1],article=result)
+    return render_template("summary1.html")
 
 @app.route("/caseList")
 def caseInfo():
@@ -115,13 +127,13 @@ def caseDetails(id):
     hear=hearing.query.filter_by(case_id=id).all()
     return render_template('case_details.html',case=cases[0],hearing=hear)
 
-@app.route('/FIR')
+@app.route('/LegalDocuments')
 def firpdf():
     # List all PDF files in the folder
     pdf_files = [file for file in os.listdir(pdf_folder) if file.endswith(".pdf")]
     return render_template('fir.html', pdf_files=pdf_files)
 
-@app.route('/FIR/pdf/<filename>')
+@app.route('/LegalDocuments/pdf/<filename>')
 def serve_pdf(filename):
     try:
         # Serve the selected PDF file from the specified folder

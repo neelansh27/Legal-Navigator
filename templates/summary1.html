@@ -1,0 +1,45 @@
+{% extends "base.html"%}
+{% block title %} Summary {% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/summary1.css') }}">
+{% endblock %}
+{% block nav %}
+    <nav>
+        <ul>
+            <li class="nonsub"><b>LegalNavigator</b></li>
+            <li class="sub">Home</li>
+            <li class="sub">option 2</li>
+            <li class="sub">option 3</li>
+        </ul>
+    </nav>
+{% endblock%}
+{% block body %}
+    <div class="summary-body">
+        <div class="summary">
+            <div class="enter">
+                <h3>Enter The Article Number Here</h3>
+            </div>
+            <form method="POST">
+            <div class="search-bar">
+                <input type="search" id="site-search" name="q" />
+                <button type="submit" class="btn-1">Search</button>
+            </div>
+            </form>
+            <div class="title">
+                <h1>Article Summary</h1>
+            </div>
+            <div class="output">
+                <div class="para">
+                    {% if article %}
+                    <h3>{{ title }}</h3>
+                    <p> {{ article }}</p>
+                    {% else %}
+                    <p>Search An Article</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

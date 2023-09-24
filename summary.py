@@ -378,6 +378,6 @@ articles_and_summaries = {
 def get_article_summary(article_prefix):
     for key in articles_and_summaries:
         if key.startswith(article_prefix):
-            return articles_and_summaries[key]
+            return [key,articles_and_summaries[key]]
     return "Article not found."
 

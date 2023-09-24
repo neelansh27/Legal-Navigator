@@ -14,10 +14,11 @@
     {% endblock %}
 </head>
 <body>
+{% block nav %}
     <header>
       <nav class="navBar">
         <div class="logo">
-          <a href="#">LegalNavigator</a>
+            <a href="{{ url_for('home') }}">LegalNavigator</a>
         </div>
         <ul class="navLinks">
             <li class="navHead"><a href="{{ url_for('home') }}">Home</a></li>
@@ -26,6 +27,7 @@
         </ul>
       </nav>
     </header>
+{% endblock %}
     {% block body %}
     {% endblock %}
 </body>
